@@ -14,7 +14,7 @@
 *   var_dump($user_actions);
 * 
 * @author Vitaliy Stepanenko <mail@vitaliy.in>
-* @version 0.1
+* @version 0.2
 * @license BSD   
 */
 
@@ -131,7 +131,7 @@ class Metadata extends CApplicationComponent {
         {
             $controller=array(
                 'name'=>$controller,
-                'actions'=>$this->getActions($controller)
+                'actions'=>$this->getActions($controller, $module)
             );   
         }
         return $c;
@@ -157,8 +157,7 @@ class Metadata extends CApplicationComponent {
         {            
             $c=str_ireplace('.php','',$c);
         }       
-        return $controllers; 
-        // die(var_dump($controllers));
+        return $controllers;         
     }
 
     /**
