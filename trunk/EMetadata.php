@@ -1,24 +1,26 @@
 <?
 /**
-* Metadata Helps to get metadata about models,controllers and actions in application* 
-* 
-* For using you need:
-* 1. Place this file to directory with components of your application (your_app_dir/protected/components)
-* 2. Add it to 'components' in your application config (your_app_dir/protected/config/main.php)
-* 'components'=>array(
-*   'metadata'=>array('class'=>'Metadata'),
-*    ...
-*  ),        
-* 3. Use:
-*   $user_actions = Yii::app()->metadata->getActions('UserController');
-*   var_dump($user_actions);
-* 
+* EMetadata class file
 * @author Vitaliy Stepanenko <mail@vitaliy.in>
 * @version 0.2
 * @license BSD   
 */
 
-class Metadata extends CApplicationComponent {
+/**
+*  Metadata Helps to get metadata about models,controllers and actions in application* 
+* 
+* For using you need:
+* 1. Place this file to directory with components of your application (your_app_dir/protected/components)
+* 2. Add it to 'components' in your application config (your_app_dir/protected/config/main.php)
+* 'components'=>array(
+*   'metadata'=>array('class'=>'ext.components.metadata.EMetadata'),
+*    ...
+*  ),        
+* 3. Use:
+*   $user_actions = Yii::app()->metadata->getActions('UserController');
+*   var_dump($user_actions);
+*/
+class EMetadata extends CApplicationComponent {
 
     /**
     * Get all information about application
